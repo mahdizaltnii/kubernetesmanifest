@@ -13,7 +13,7 @@ node {
                     withCredentials([usernamePassword(credentialsId: 'github', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                         //def encodedPassword = URLEncoder.encode("$GIT_PASSWORD",'UTF-8')
                         sh "git config user.email mahdi.zaltni@esprit.tn"
-                        sh "git config user.name mahdizaltnii"
+                        sh "git config user.name  mahdizaltni"
                         //sh "git switch master"
                         sh "cat deployment.yaml"
                         sh "sed -i 's+raj80dockerid/test.*+raj80dockerid/test:${DOCKERTAG}+g' deployment.yaml"
